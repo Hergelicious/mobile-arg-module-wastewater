@@ -1,78 +1,340 @@
-# Supplementary Code
+Mobile antibiotic resistance genes form a reproducible, integron-associated module in wastewater
 
-Code for: *Mobile antibiotic resistance genes form a reproducible, integron-associated module in wastewater*
+Supplementary computational code and frozen results for the manuscript:
 
-## Input
+“Mobile antibiotic resistance genes form a reproducible, integron-associated module in wastewater”**
 
-Additional inputs for Section 2.11: from Zenodo record 14652833, `panres_counts.csv` and `kingdom_motus_pad_agg.csv`; the NCBI run table for PRJNA509305 (`SraRunTable.csv`); and national antibiotic consumption (WHO GLASS, via Our World in Data: `antibiotic-consumption-rate.csv`).
+This repository contains the computational analyses, frozen specifications, verification procedures, external validation code, and numerical outputs underlying the manuscript.
 
+The repository is intended to provide a transparent record of the analyses and to allow the reported computational results to be independently checked.
 
-From Zhu et al. (2025), *Nat. Commun.* 16, 4006: the Source Data workbook (`41467_2025_59019_MOESM8_ESM.xlsx`), Supplementary Data 1 (`MOESM3`, sequencing output) and Supplementary Data 3 (`MOESM5`, MGE abundances). From Martiny et al. (2025), *Nat. Commun.* 16, 10278: Supplementary Data 3 and 4 (`41467_2025_66070_MOESM6_ESM.xlsx`, `MOESM7`; network nodes and links). None is redistributed here; download them from the publishers and check their licences. The scripts expect it at `/mnt/user-data/uploads/41467_2025_59019_MOESM8_ESM.xlsx`; edit that path at the top of each script if needed. No other data are used.
+## Repository scope
 
-## Environment
+This repository contains:
 
-Python 3.12 with numpy, pandas, scipy, scikit-learn, statsmodels, matplotlib, openpyxl. Node.js with the `docx` package (manuscript build only). Figures use the Liberation Sans font (metrically identical to Arial).
+* core analysis and data-processing code;
+* ARG-module construction and analysis;
+* random-forest cross-validation;
+* country decoding;
+* sampling-effort analysis;
+* integron-associated analyses;
+* control analyses;
+* pre-specified frozen tests;
+* external validation analyses;
+* independent verification code;
+* scripts for constructing numerical tables;
+* frozen specifications and frozen numerical results.
+---
 
-## Run order
+Repository structure
 
-Each step reads only files written by earlier steps. Random seeds are fixed, so all statistics are reproducible; the only non-deterministic element is the horizontal jitter of points in some figures, which is cosmetic.
+```text
+mobile-arg-module-wastewater/
+│
+├── external_validation/
+│   ├── build_martiny.py
+│   ├── f_specificity.py
+│   ├── make_bacterial_reference.py
+│   └── test_H.py
+│
+├── results/
+│   ├── frozen_results.json
+│   ├── frozen_results2.json
+│   ├── frozen_results3.json
+│   └── frozen_results3_alr.json
+│
+├── src/
+│   ├── analysis.py
+│   ├── arrays.py
+│   ├── canonical.py
+│   ├── controls.py
+│   ├── decode_final.py
+│   ├── effort.py
+│   ├── integron_depth.py
+│   ├── module.py
+│   ├── rf_fold.py
+│   │
+│   ├── frozen tests/
+│   │   ├── finish_frozen3.py
+│   │   ├── freeze_spec.py
+│   │   ├── freeze_spec2.py
+│   │   ├── freeze_spec3.py
+│   │   ├── run_frozen.py
+│   │   ├── run_frozen2.py
+│   │   ├── run_frozen3.py
+│   │   └── run_frozen3_alr.py
+│   │
+│   └── tables/
+│       ├── build_tables.py
+│       ├── make_gene_table2.py
+│       └── make_xlsx.py
+│
+├── results/
+│   ├── frozen_results.json
+│   ├── frozen_results2.json
+│   ├── frozen_results3.json
+│   └── frozen_results3_alr.json
+│
+└── verify.py
+```
 
-| Step | Script | Writes | Used for |
-|---|---|---|---|
-| 1 | `analysis.py` | `results.json`, `gene_table.csv`, `sample_layers.csv`, `city_table.csv` | Sample counts, load statistics, ICC, socio-economic models, MAG host breadth, mobility indices |
-| 2 | `make_gene_table2.py` | `gene_table2.csv` | Adds gene abundance, variability and detection columns |
-| 3 | `controls.py` | `controls.json` | MAG representation and class × mechanism mixing (Section 3.7, Note S1) |
-| 4 | `canonical.py` | `canonical.json` | All primary statistics: D (9,999 permutations), controls, bootstrap CI, jackknife, family exclusion, sum-of-squares shares, layer variability, REML |
-| 5 | `arrays.py` | `gene_table_final.csv`, `Dnull.npy`, `rhonull.npy` | Per-gene results (Table S1) and permutation nulls for figures |
-| 6 | `rf_fold.py` | adds `transfer_R2` to `canonical.json` | Random forests with imputation fitted inside folds (Fig. 1c) |
-| 7 | `decode_final.py` | `decode.json`, `rand_acc.npy` | Country decoding (Fig. 4b) |
-| 8 | `module.py` | `module.json`, `module_membership.csv` | Label-free module discovery; design fixed in the file header before running (Section 3.4, Fig. 3) |
-| 9 | `effort.py` | `effort.json` | Sampling-effort adjustment (Section 3.6) |
-| 9b | `freeze_spec.py` | `frozen_spec.json` (SHA-256 recorded) | Pre-specified tests, frozen with a recorded hash before the test script was written (Section 2.10) |
-| 9c | `run_frozen.py` | `frozen_results.json` | Runs the frozen tests; refuses to run if the specification's hash has changed |
-| 9d | `intI1_pergene.py` | `intI1_rho.csv` | Per-gene intI1 correlations for Table S1 (checked against the frozen run) |
-| 9f | `freeze_spec2.py` | `frozen_spec2.json` (SHA-256 recorded) | Second frozen specification: external ResFinder classification test (Section 2.10, test C) |
-| 9g | `run_frozen2.py` | `frozen_results2.json` | Runs test C; refuses to run if the specification's hash has changed |
-| 9h | `build_martiny.py` | `martiny_matrix.pkl` | Sample-by-gene matrix from Martiny et al. `panres_counts.csv` (Zenodo 14652833) |
-| 9i | `freeze_spec3.py` | `frozen_spec3.json` (SHA-256 recorded) | Third frozen specification: external validation, temporal stability, drivers, cross-compartment, batch (Section 2.11) |
-| 9j | `run_frozen3.py`, then `finish_frozen3.py` | `frozen_results3.json` | Runs tests D and E, then variance components and test G; the CLR deviation is documented in the script header |
-| 9k | `make_bacterial_reference.py` | `bacterial_reference.csv` | Bacterial mOTU fragments per sewage sample, for the pre-specified ALR normalisation |
-| 9l | `run_frozen3_alr.py` | `frozen_results3_alr.json`, `F_country_table.csv` | Tests D, E, F and G with the pre-specified ALR normalisation (primary; CLR results are the sensitivity analysis) |
-| 9m | `f_specificity.py` | `f_specificity.json` | Exploratory, after test F: consumption association for other acquired and latent genes |
-| 9n | `test_H.py` | `test_H.json` | Test H (run-level adjustment) plus the collection-date analyses added once dates were found |
-| 9e | `integron_depth.py` | `integron_depth.json`, `intI1_corr.npy` | Exploratory, added after the frozen tests: partial intI1 and qacEΔ1 correlations and the non-annotated module comparison |
-| 10 | `figs2.py` | Figs 1, 2, 4, 5, 6 and S1 (PNG, PDF, TIFF in `figout/`) | |
-| 11 | `fig_module.py` | Fig. 3 | |
-| 12 | `ga.py` | graphical abstract | |
-| 13 | `build_tables.py`, then `make_xlsx.py` | `Supplementary_Tables_S1_S2.xlsx` | Tables S1 and S2 |
-| 14 | `node build15.js`, `node build_supp.js`, `node hl.js`, `node cover.js` | manuscript, supplementary information, highlights, cover letter | Every number in the text is read from the JSON files above, not typed by hand |
+---
 
-`build15.js` is the concatenation `head.js + body15.js + tail.js`; `build_supp.js` is `head.js + suppbody.js + tail_supp.js`.
+## Input data
 
-## Notes
+The analyses use external datasets that are not redistributed in this repository.
 
-- `freeze_spec.py` and `freeze_spec2.py` regenerate the frozen specifications; re-running them should produce byte-identical files (same SHA-256). The shipped `frozen_spec.json` and `frozen_spec2.json` are the records of what was specified.
-- `figs2.py` also adds the 95% range of the random 45-gene layer SDs to `canonical.json` (used for Fig. 1b).
+Wastewater ARG and metagenomic data
 
-## Independent check
+Additional inputs used for the analyses include:
 
-`verify.py` re-derives the headline statistics with separately written code and can be run after step 5 to confirm them.
+* `panres_counts.csv`;
+* `kingdom_motus_pad_agg.csv`;
+* the NCBI run table for PRJNA509305 (`SraRunTable.csv`);
+* national antibiotic-consumption data (`antibiotic-consumption-rate.csv`).
 
-## Where each result comes from
+The relevant source data should be obtained from their original repositories or publishers, subject to their respective access conditions and licences.
 
-| Manuscript item | Source |
-|---|---|
-| D, excess R², all D variants, bootstrap CI, jackknife, family exclusion | `canonical.json` |
-| Sum-of-squares shares, REML components, layer SDs, pairwise correlations | `canonical.json` |
-| Label-free module, enrichment, stability, sensitivity | `module.json` |
-| Country decoding | `decode.json` |
-| Sampling-effort adjustment | `effort.json` |
-| Load statistics, ICC, socio-economic results, host breadth, coupling vs MAG agreement | `results.json` |
-| Pre-specified intI1 and external network tests; sequencing-depth adjustment | `frozen_results.json` |
-| Exploratory integron sensitivity analyses | `integron_depth.json` |
-| Pre-specified external classification test (test C) | `frozen_results2.json` |
-| External validation in untreated sewage (Section 3.9), primary | `frozen_results3_alr.json` |
-| External validation, CLR sensitivity | `frozen_results3.json` |
-| Drivers (test F) and campaign/sequencing (test H) | `frozen_results3_alr.json`, `f_specificity.json`, `test_H.json` |
-| Figure 2d (per-gene intI1 correlations, pre-specified test B) | `intI1_rho.csv` |
-| MAG representation and cell mixing | `controls.json` |
+Zhu et al. (2025)
+
+The analyses use data associated with:
+
+**Zhu et al. (2025), Nature Communications 16, 4006.**
+
+Relevant materials include:
+
+* Source Data workbook: `41467_2025_59019_MOESM8_ESM.xlsx`;
+* Supplementary Data 1 (`MOESM3`);
+* Supplementary Data 3 (`MOESM5`).
+
+These files are not redistributed here.
+
+Martiny et al. (2025)
+
+External validation uses data associated with:
+
+Martiny et al. (2025), Nature Communications 16, 10278.**
+
+Relevant materials include:
+
+* Supplementary Data 3 (`41467_2025_66070_MOESM6_ESM.xlsx`);
+* Supplementary Data 4 (`MOESM7`).
+
+These files are not redistributed here.
+
+The scripts that require external inputs should be configured with the local paths to the downloaded source files.
+
+---
+
+## Core analysis
+
+The principal computational implementation is contained in `src/`.
+
+| Script              | Function                                                                                           |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| `analysis.py`       | Main sample, abundance, load, ICC, socio-economic, host-breadth and mobility analyses              |
+| `arrays.py`         | Construction of final gene-level arrays and permutation null distributions                         |
+| `canonical.py`      | Primary statistical analyses, including D statistics, controls, bootstrap and jackknife procedures |
+| `controls.py`       | Control analyses for MAG representation and class × mechanism mixing                               |
+| `decode_final.py`   | Country-decoding analysis                                                                          |
+| `effort.py`         | Sampling-effort adjustment                                                                         |
+| `integron_depth.py` | Integron-associated sensitivity analyses                                                           |
+| `module.py`         | Label-free module discovery and module membership analysis                                         |
+| `rf_fold.py`        | Random-forest cross-validation with imputation performed within folds                              |
+
+---
+
+Frozen specifications and tests
+
+Three frozen specifications are included:
+
+```text
+src/frozen tests/freeze_spec.py
+src/frozen tests/freeze_spec2.py
+src/frozen tests/freeze_spec3.py
+```
+
+with their corresponding frozen specification records:
+
+```text
+frozen_spec.json
+frozen_spec2.json
+frozen_spec3.json
+```
+
+The frozen specifications preserve the pre-specified computational tests used in the analysis.
+
+The corresponding execution scripts are:
+
+```text
+run_frozen.py
+run_frozen2.py
+run_frozen3.py
+run_frozen3_alr.py
+```
+
+`finish_frozen3.py` completes the third frozen analysis where required.
+
+The frozen specifications should be treated as fixed records of the analyses that were specified before evaluation of the corresponding results.
+
+---
+
+Frozen numerical results
+
+The repository contains four frozen result files:
+
+```text
+results/
+├── frozen_results.json
+├── frozen_results2.json
+├── frozen_results3.json
+└── frozen_results3_alr.json
+```
+
+These files preserve the numerical outputs of the frozen analyses.
+
+Broadly:
+
+| File                       | Analysis                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| `frozen_results.json`      | Pre-specified integron-associated and external-network tests                   |
+| `frozen_results2.json`     | Pre-specified external classification test                                     |
+| `frozen_results3.json`     | External validation and associated sensitivity analyses using the CLR workflow |
+| `frozen_results3_alr.json` | External validation using the pre-specified ALR normalisation                  |
+
+The frozen JSON files are retained as reference outputs for computational verification and reproducibility.
+
+---
+
+External validation
+
+The `external_validation/` directory contains analyses supporting the external validation component.
+
+`build_martiny.py`
+
+Constructs the sample-by-gene matrix required for the external validation using the Martiny et al. data.
+
+### `make_bacterial_reference.py`
+
+Constructs the bacterial reference used for the pre-specified ALR normalisation.
+
+### `f_specificity.py`
+
+Performs the specificity analysis associated with the external validation workflow.
+
+### `test_H.py`
+
+Runs the run-level adjustment analysis and associated collection-date analyses.
+
+---
+
+Numerical tables
+
+The `src/tables/` directory contains scripts for constructing numerical/tabular outputs:
+
+```text
+build_tables.py
+make_gene_table2.py
+make_xlsx.py
+```
+
+These scripts are included to document the generation of the numerical tables associated with the computational analyses.
+
+They are not figure-generation scripts.
+
+---
+
+Independent verification
+
+The top-level script:
+
+```text
+verify.py
+```
+
+provides an independently written verification of the principal reported statistics.
+
+It is intended as an additional check on the computational implementation and does not replace the primary analysis scripts.
+
+---
+
+Reproducibility
+
+The computational workflow uses fixed random seeds where stochastic procedures are involved.
+
+Reproducibility requires:
+
+1. the Python environment specified below;
+2. the external input datasets listed above;
+3. the source code in this repository;
+4. the frozen specification files;
+5. the frozen result files.
+
+Because external datasets are not redistributed here, users must obtain those datasets from their original sources and configure the corresponding local file paths in the scripts where necessary.
+
+The frozen JSON files provide fixed reference outputs against which the implementation can be checked.
+
+---
+
+## Python environment
+
+The analyses were developed and tested using **Python 3.12**.
+
+The principal Python dependencies are:
+
+```text
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+openpyxl
+```
+
+A `requirements.txt` file should be used to record the tested package environment.
+
+If package versions are important for exact reproduction, the versions used for the final analysis should be pinned in `requirements.txt`.
+
+---
+Relationship to the manuscript
+
+The repository contains the computational work underlying the analyses reported in the manuscript, including:
+
+* ARG abundance and variability analyses;
+* module discovery;
+* integron-associated analyses;
+* controls and sensitivity analyses;
+* random-forest transfer analysis;
+* country decoding;
+* sampling-effort adjustment;
+* frozen pre-specified tests;
+* external validation;
+* numerical table construction.
+
+---
+
+Data and code availability
+
+Code developed specifically for the computational analyses is provided in this repository.
+
+External datasets are not redistributed where they are already publicly available from their original repositories or publishers. Users should obtain the source data directly from those providers and comply with the applicable data-access conditions and licences.
+
+The frozen specification and result files are included to preserve the computational record of the reported analyses.
+
+---
+
+Citation
+
+If you use this code or the associated computational workflow, please cite the accompanying manuscript:
+
+> Hassan et al. *Mobile antibiotic resistance genes form a reproducible, integron-associated module in wastewater.*
+
+Please use the final published citation once available.
+
+---
+
+License
+
+Unless otherwise specified by the repository owner, the code in this repository is provided under the **MIT License**.
+
+External datasets referenced by the code are **not covered by this software licence** and remain subject to their original source-specific licences and terms of use.
