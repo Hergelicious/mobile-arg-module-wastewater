@@ -1,0 +1,67 @@
+{
+ "spec_sha256": "a2f3b77ed1f2e46b823cc82714dd05b65dd0007e91e660639c154b9b22486be0",
+ "n_acquired": 58,
+ "n_other": 56,
+ "primary_D_RF": [
+  0.10379957224593905,
+  0.0001
+ ],
+ "mean_R2": {
+  "resfinder": 0.4008709429978091,
+  "other": 0.29707137075187007
+ },
+ "agreement": {
+  "both": 37,
+  "resfinder_only": 21,
+  "curated_only": 8,
+  "neither": 48,
+  "kappa": 0.4931002759889604
+ },
+ "curated_only_genes": [
+  "AAC(6')-Ib7",
+  "AAC(6')-Ib9",
+  "ANT(3'')-IIa",
+  "cmlA5",
+  "cmlA9",
+  "EreA2",
+  "GES",
+  "VEB-PER"
+ ],
+ "resfinder_only_genes": [
+  "AAC(6')-IIa",
+  "APH(3')-Ia",
+  "CfxA2",
+  "EreB",
+  "EreD",
+  "ErmF",
+  "lsaE",
+  "mefC",
+  "OXA-205",
+  "OXA-347",
+  "OXA-50",
+  "poxtA",
+  "TEM-116",
+  "tet(32)",
+  "tet(36)",
+  "tet(39)",
+  "tet(D)",
+  "tet(E)",
+  "tet(O)",
+  "tet(W)",
+  "tet(X5)"
+ ],
+ "D_RF_noncurated": [
+  0.08018338313242007,
+  0.0001
+ ],
+ "n_noncurated_split": [
+  21,
+  48
+ ],
+ "module_enrichment": {
+  "module_size": 77,
+  "resfinder_in_module": 52,
+  "P": 1.940434460155313e-07
+ },
+ "success": true
+}
