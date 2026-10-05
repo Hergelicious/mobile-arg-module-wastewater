@@ -1,0 +1,44 @@
+{
+ "spec_sha256": "57666824bf6f6c7f14a87bc989f290a921fa0e60cfd5a70c57df0eaaf7754b7d",
+ "A_n_module_nodes": 17,
+ "A_primary": {
+  "observed_share": 0.45588235294117646,
+  "null_mean": 0.38377794117647057,
+  "null_q95": 0.5294117647058824,
+  "P": 0.18098190180981902
+ },
+ "A_secondary": {
+  "observed_density": 0.09558823529411764,
+  "null_mean": 0.06645588235294117,
+  "P": 0.14588541145885411
+ },
+ "A_n_communities_among_module_nodes": 3,
+ "A_n_communities_among_acquired": 5,
+ "A_success": false,
+ "B_n_intI1_rows": 7,
+ "B_samples_matched": 226,
+ "B_primary": {
+  "mean_rho_mobile": 0.2195119250944267,
+  "mean_rho_other": 0.04269771426796783,
+  "difference": 0.17681421082645887,
+  "P": 0.0001
+ },
+ "B_secondary": {
+  "mean_rho_module": 0.1562996683936385,
+  "mean_rho_outside": 0.021327147227805886,
+  "difference": 0.13497252116583264,
+  "P": 0.0017
+ },
+ "B_success": true,
+ "C_samples_matched": 226,
+ "C_depth": {
+  "HQ_Gb_median": 10.045379919649006,
+  "HQ_Gb_range": [
+   3.761486445000005,
+   32.498187750999975
+  ],
+  "depth_country_R2": 0.3292042463509752,
+  "D_depth_adjusted": 0.15117414397317885,
+  "P": 0.001
+ }
+}

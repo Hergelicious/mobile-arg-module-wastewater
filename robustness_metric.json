@@ -1,0 +1,31 @@
+{
+ "depth_subsampling_sewage": {
+  "10%": {
+   "rho_with_full_depth": 0.765,
+   "median_module_genes_detected": 26
+  },
+  "25%": {
+   "rho_with_full_depth": 0.88,
+   "median_module_genes_detected": 31
+  },
+  "50%": {
+   "rho_with_full_depth": 0.941,
+   "median_module_genes_detected": 33
+  },
+  "75%": {
+   "rho_with_full_depth": 0.965,
+   "median_module_genes_detected": 34
+  }
+ },
+ "normalisation_sewage": {
+  "ALR_vs_CLR_rho": 0.861,
+  "ALR_vs_fraction_rho": 0.532,
+  "CLR_vs_fraction_rho": 0.594
+ },
+ "annotation_discovery": {
+  "module_genes_CARD": 77,
+  "module_genes_with_cross_database_name": 52,
+  "rho_CARD_vs_cross_database_subset": 0.988
+ },
+ "note": "Depth subsampling is applied to the sewage counts, the only cohort with raw gene counts; the discovery cohort provides per-cell abundances only."
+}

@@ -1,0 +1,72 @@
+{
+ "ICC_differences": {
+  "module_score_minus_total": {
+   "point": 0.106,
+   "CI95": [
+    -0.101,
+    0.351
+   ],
+   "P_two_sided": 0.36
+  },
+  "module_score_minus_richness": {
+   "point": 0.185,
+   "CI95": [
+    0.053,
+    0.347
+   ],
+   "P_two_sided": 0.002
+  },
+  "module_score_minus_acquired_sum": {
+   "point": 0.036,
+   "CI95": [
+    -0.093,
+    0.166
+   ],
+   "P_two_sided": 0.568
+  },
+  "module_score_minus_module_share": {
+   "point": 0.218,
+   "CI95": [
+    -0.0,
+    0.437
+   ],
+   "P_two_sided": 0.051
+  }
+ },
+ "consumption_rho_differences": {
+  "module_score_minus_total": {
+   "point": 0.121,
+   "CI95": [
+    -0.249,
+    0.508
+   ],
+   "P_two_sided": 0.509
+  },
+  "module_score_minus_richness": {
+   "point": 0.317,
+   "CI95": [
+    0.044,
+    0.578
+   ],
+   "P_two_sided": 0.013
+  },
+  "module_score_minus_module_share": {
+   "point": 0.111,
+   "CI95": [
+    -0.164,
+    0.378
+   ],
+   "P_two_sided": 0.446
+  }
+ },
+ "D_excluding_USA_China": {
+  "point": 0.0494,
+  "CI95": [
+   -0.026,
+   0.0987
+  ],
+  "P_reported_in_primary": 0.175,
+  "n_plants": 40,
+  "n_countries": 14
+ }
+}

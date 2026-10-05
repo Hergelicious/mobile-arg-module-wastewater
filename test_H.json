@@ -1,0 +1,33 @@
+{
+ "run_factors": {
+  "plants_with_301bp_runs": 4,
+  "plants_in_second_release": 10
+ },
+ "H_primary_run_level": [
+  0.14502610496121304,
+  0.001
+ ],
+ "date_country_R2": 0.9727295332007196,
+ "added_D_after_date_adjustment": [
+  0.06983023689986151,
+  0.002
+ ],
+ "added_within_country_date_sensitivity": {
+  "USA": {
+   "n_plants": 57,
+   "n_dates": 28,
+   "mean_abs_rho_mobile": 0.17661397820779756,
+   "mean_abs_rho_other": 0.15238860802641824,
+   "difference": 0.024225370181379324,
+   "P": 0.099
+  },
+  "China": {
+   "n_plants": 44,
+   "n_dates": 14,
+   "mean_abs_rho_mobile": 0.1525136804689646,
+   "mean_abs_rho_other": 0.1506507967745192,
+   "difference": 0.0018628836944453997,
+   "P": 0.406
+  }
+ }
+}

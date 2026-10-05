@@ -1,0 +1,35 @@
+{
+ "clinical_source": "WHO GLASS 2022 compilation (compiled_WHO_GLASS_2022.csv), BLOOD specimens, 2017-2020",
+ "cohort": "external sewage cohort (Martiny et al. 2025)",
+ "countries_with_both_before_filtering": 50,
+ "covariates": [
+  "antibiotic consumption (DDD/1000/day)",
+  "log GDP per capita PPP (WDI NY.GDP.PCAP.PP.KD, latest year <= 2021)",
+  "WHO region"
+ ],
+ "outcomes": {
+  "primary": "E. coli, third-generation cephalosporins (Cefotaxime/Ceftriaxone/Ceftazidime)",
+  "secondary": [
+   "E. coli ciprofloxacin",
+   "K. pneumoniae third-generation cephalosporins",
+   "K. pneumoniae carbapenems (Meropenem/Imipenem)"
+  ]
+ },
+ "pooling": "sum Resistant / sum InterpretableAST across years and listed drugs, per country; minimum 20 interpretable isolates",
+ "predictors": [
+  "module score",
+  "acquired-not-module score",
+  "total ARG abundance",
+  "ARG richness"
+ ],
+ "reporting": "all outcomes reported, including null results; T3 reported regardless",
+ "success": "T1 P<0.05 positive AND module coefficient in T2 P<0.05",
+ "tests": {
+  "T1": "Spearman: module score vs primary outcome",
+  "T2": "logit(resistance) ~ module + log consumption + log GDP + region",
+  "T3": "same model with acquired-not-module, and with total ARG, in place of module (specificity)",
+  "T4": "change in adjusted R2 from adding the module to covariates only"
+ },
+ "uninformative_if": "fewer than 25 countries with both data types",
+ "version": "frozen-4"
+}

@@ -1,0 +1,57 @@
+{
+ "spec_sha256": "b6d1fadaa45434f52ea5071119065cef7bbc48dd98d231c3365a59936ca3e996",
+ "deviation": "CLR instead of ALR (mOTU file unavailable)",
+ "n_samples": 1147,
+ "n_cities": 350,
+ "n_countries": 112,
+ "n_module_genes_detected": 43,
+ "n_acquired_comparison": 98,
+ "n_functional_comparison": 529,
+ "D_validation_primary": {
+  "D_ext": 0.00177091651685235,
+  "P": 0.4135,
+  "mean_R2_module": 0.5172338129656965,
+  "mean_R2_acquired_other": 0.5154628964488441
+ },
+ "D_validation_secondary_vs_FG": {
+  "D_ext": 0.03461498372508187,
+  "P": 0.0014,
+  "mean_R2_FG": 0.4826188292406146
+ },
+ "covariation": {
+  "mean_within_country_r_module": 0.23456723864176038,
+  "null_median": 0.19304182993229949,
+  "P": 0.016983016983016984
+ },
+ "E_temporal": {
+  "n_cities_multi_year": 195,
+  "rho_first_vs_last_year": 0.28743303824305294,
+  "P": 4.615485925094327e-05,
+  "variance_fractions": {
+   "city": 0.345,
+   "year": 0.214,
+   "country": 0.0,
+   "resid": 0.442
+  }
+ },
+ "G_cross_compartment": {
+  "n_cities": 12,
+  "cities": [
+   "atlanta",
+   "belohorizonte",
+   "bologna",
+   "chicago",
+   "gothenburg",
+   "houston",
+   "portland",
+   "pretoria",
+   "santiago",
+   "singapore",
+   "sydney",
+   "toronto"
+  ],
+  "rho": 0.5174825174825175,
+  "P": 0.08486877113393476,
+  "status": "exploratory: different cohorts, years and pipelines"
+ }
+}

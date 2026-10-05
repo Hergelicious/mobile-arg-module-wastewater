@@ -1,0 +1,53 @@
+{
+ "spec_sha256": "b6d1fadaa45434f52ea5071119065cef7bbc48dd98d231c3365a59936ca3e996",
+ "normalisation": "ALR vs raw bacterial mOTU fragments (pre-specified)",
+ "n_samples": 1147,
+ "n_cities": 350,
+ "n_countries": 112,
+ "n_module_genes_detected": 43,
+ "n_acquired_comparison": 98,
+ "n_functional_comparison": 529,
+ "D_validation_primary": {
+  "D_ext": 0.004195510454165441,
+  "P": 0.3137,
+  "mean_R2_module": 0.5258646381578557,
+  "mean_R2_acquired_other": 0.5216691277036902
+ },
+ "D_validation_secondary_vs_FG": {
+  "D_ext": 0.05399423234172929,
+  "P": 0.0001,
+  "mean_R2_FG": 0.4718704058161264
+ },
+ "covariation": {
+  "mean_within_country_r_module": 0.2156560664559227,
+  "null_median": 0.17461804349741145,
+  "P": 0.015984015984015984
+ },
+ "E_temporal": {
+  "n_cities_multi_year": 195,
+  "rho_first_vs_last_year": 0.30582789816957706,
+  "P": 1.3749270648980151e-05,
+  "variance_fractions": {
+   "city": 0.254,
+   "year": 0.266,
+   "country": 0.0,
+   "resid": 0.48
+  }
+ },
+ "G_cross_compartment": {
+  "n_cities": 12,
+  "rho": 0.5174825174825175,
+  "P": 0.08486877113393476
+ },
+ "F_drivers": {
+  "source": "WHO GLASS via Our World in Data (deviation: Browne et al. 2021 not obtainable)",
+  "n_countries_matched": 50,
+  "rho": 0.3159183673469388,
+  "P": 0.02542006413671061,
+  "mixed_region": {
+   "coef": 0.007191291436332109,
+   "P": 0.09305206467091452
+  },
+  "gdp_partial": "not run: no GDP data for the sewage cohort in the files available"
+ }
+}

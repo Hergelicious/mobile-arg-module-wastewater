@@ -1,0 +1,115 @@
+gene_CARD,in_module,mobile_associated_curated,resfinder_acquired,name_normalised,panres_ids,drug_class,mechanism,prevalence_discovery,country_R2_discovery,rho_intI1_within_country
+AAC(6')-Ib7,True,True,False,aac(6')-ib7,,Aminoglycoside,antibiotic.inactivation,1.0,0.555,0.596
+AAC(6')-Ib9,True,True,False,aac(6')-ib9,,Aminoglycoside,antibiotic.inactivation,0.743,0.662,0.075
+AAC(6')-IIa,True,False,True,aac(6')-iia,pan_1955,Aminoglycoside,antibiotic.inactivation,0.726,0.364,0.17
+AAC3,False,False,False,aac3,,Aminoglycoside,antibiotic.inactivation,1.0,0.196,-0.079
+AAC3-I,False,False,False,aac3-i,,Aminoglycoside,antibiotic.inactivation,0.978,0.392,0.05
+AAC6-I,False,False,False,aac6-i,,Aminoglycoside,antibiotic.inactivation,0.965,0.183,-0.025
+aadA10,True,True,True,aada10,pan_1878;pan_508,Aminoglycoside,antibiotic.inactivation,1.0,0.275,0.539
+aadA11,True,True,True,aada11,pan_2162;pan_2543,Aminoglycoside,antibiotic.inactivation,0.969,0.18,0.295
+aadA15,True,True,True,aada15,pan_661,Aminoglycoside,antibiotic.inactivation,0.863,0.527,0.197
+aadA2,True,True,True,aada2,pan_3635,Aminoglycoside,antibiotic.inactivation,0.881,0.542,0.118
+aadA3,True,True,True,aada3,pan_1194,Aminoglycoside,antibiotic.inactivation,0.991,0.614,0.354
+aadA5,True,True,True,aada5,pan_522,Aminoglycoside,antibiotic.inactivation,0.907,0.416,0.279
+aadA6,True,True,True,aada6,pan_360,Aminoglycoside,antibiotic.inactivation,0.978,0.218,0.287
+aadA7,True,True,True,aada7,pan_1516;pan_2552,Aminoglycoside,antibiotic.inactivation,0.73,0.319,0.183
+aadS,True,False,False,aads,,Aminoglycoside,antibiotic.inactivation,0.978,0.543,0.098
+AER-1,True,False,False,aer-1,,Penam,antibiotic.inactivation,0.867,0.192,0.188
+ANT(3'')-IIa,True,True,False,ant(3'')-iia,,Aminoglycoside,antibiotic.inactivation,1.0,0.582,0.498
+ANT9,True,False,False,ant9,,Aminoglycoside,antibiotic.inactivation,0.602,0.215,0.011
+APH(3'')-Ib,True,True,True,aph(3'')-ib,pan_1671;pan_2884;pan_4198;pan_4334;pan_6773,Aminoglycoside,antibiotic.inactivation,0.996,0.37,0.398
+APH(3')-Ia,False,False,True,aph(3')-ia,,Aminoglycoside,antibiotic.inactivation,0.535,0.197,0.189
+APH(6)-Id,True,True,True,aph(6)-id,pan_1519;pan_2232;pan_3411;pan_4007;pan_6801,Aminoglycoside,antibiotic.inactivation,0.991,0.353,0.361
+APH3,False,False,False,aph3,,Aminoglycoside,antibiotic.inactivation,1.0,0.356,-0.01
+APH3',False,False,False,aph3',,Aminoglycoside,antibiotic.inactivation,0.819,0.26,0.115
+ArmA_Rmt,False,False,False,arma_rmt,,Aminoglycoside,antibiotic.target.alteration,0.991,0.215,0.206
+CARB-PSE,True,False,False,carb-pse,,Beta.lactam,antibiotic.inactivation,0.898,0.29,0.175
+catB3,True,True,True,catb3,pan_1806;pan_451,Phenicol,antibiotic.inactivation,0.531,0.695,0.136
+catB8,True,True,True,catb8,pan_329,Phenicol,antibiotic.inactivation,0.549,0.568,0.259
+Cfr23RibosomalRNAMethyltransferase,True,False,False,cfr23ribosomalrnamethyltransferase,,Multidrug,antibiotic.target.alteration,0.699,0.37,0.0
+CfxA2,True,False,True,cfxa2,pan_3123,Beta.lactam,antibiotic.inactivation,0.655,0.2,0.176
+Chloramphenicol_Acetyltransferase_CAT,True,False,False,chloramphenicol_acetyltransferase_cat,,Chloramphenicol,antibiotic.inactivation,0.796,0.175,0.078
+Chloramphenicol_Efflux_Pump,True,False,False,chloramphenicol_efflux_pump,,Chloramphenicol,antibiotic.efflux,0.832,0.402,-0.023
+ClassA,False,False,False,classa,,Beta.lactam,antibiotic.inactivation,1.0,0.189,-0.24
+ClassB,False,False,False,classb,,Beta.lactam,antibiotic.inactivation,1.0,0.25,-0.091
+ClassC-AmpC,True,False,False,classc-ampc,,Beta.lactam,antibiotic.inactivation,0.996,0.268,0.132
+ClassD,True,False,False,classd,,Beta.lactam,antibiotic.inactivation,1.0,0.262,-0.134
+cmlA5,True,True,False,cmla5,,Phenicol,antibiotic.efflux,0.779,0.262,0.304
+cmlA9,True,True,False,cmla9,,Phenicol,antibiotic.efflux,0.655,0.573,0.132
+DfrB9,False,False,False,dfrb9,,Diaminopyrimidine,antibiotic.target.replacement,0.562,0.247,0.118
+EreA,True,True,True,ere(a),pan_2815;pan_292;pan_4026;pan_4313;pan_6179;pan_664,MLS,antibiotic.inactivation,0.748,0.691,0.164
+EreA2,True,True,False,ere(a)2,,MLS,antibiotic.inactivation,0.881,0.405,0.224
+EreB,False,False,True,ere(b),,MLS,antibiotic.inactivation,0.602,0.22,0.05
+EreD,True,False,True,ere(d),pan_1366,MLS,antibiotic.inactivation,0.907,0.295,-0.042
+Erm23SRibosomalRNAMethyltransferase,True,False,False,erm23sribosomalrnamethyltransferase,,MLS,antibiotic.target.alteration,1.0,0.38,0.098
+ErmB,True,True,True,erm(b),pan_13028;pan_13031;pan_2607;pan_2772;pan_2854;pan_2882;pan_3142;pan_3148;pan_3149;pan_3262;pan_4167;pan_4266;pan_4423;pan_4926;pan_6644,MLS,antibiotic.target.alteration,0.783,0.591,0.023
+ErmF,True,False,True,erm(f),pan_2630;pan_4610;pan_641,MLS,antibiotic.target.alteration,0.991,0.463,-0.001
+GES,True,True,False,ges,,Beta.lactam,antibiotic.inactivation,0.686,0.45,0.16
+GES-1,True,True,True,blages-1,pan_1607,Beta.lactam,antibiotic.inactivation,0.774,0.435,0.241
+GOB,False,False,False,gob,,Beta.lactam,antibiotic.inactivation,0.761,0.217,-0.104
+HelR,False,False,False,helr,,Rifamycin,antibiotic.target.protection,0.54,0.237,-0.09
+lnuF,True,True,True,lnu(f),pan_2228;pan_2305;pan_4039,MLS,antibiotic.inactivation,0.509,0.619,0.118
+lsaE,True,False,True,lsa(e),pan_4418,Multidrug,antibiotic.target.protection,0.553,0.454,0.105
+mefC,True,False,True,mef(c),pan_1060,MLS,antibiotic.efflux,0.889,0.426,0.001
+mphA,False,True,True,mph(a),,MLS,antibiotic.inactivation,0.872,0.566,0.33
+mphE,True,True,True,mph(e),pan_2095;pan_2216,MLS,antibiotic.inactivation,0.965,0.349,0.232
+mphG,True,True,True,mph(g),pan_1417,MLS,antibiotic.inactivation,0.916,0.429,0.108
+msrE,True,True,True,msr(e),pan_23,MLS,antibiotic.target.protection,0.987,0.394,0.209
+NDM-CcrA,True,False,False,ndm-ccra,,Beta.lactam,antibiotic.inactivation,0.996,0.147,0.044
+NPS-1,True,False,False,blanps-1,,Beta.lactam,antibiotic.inactivation,0.712,0.211,0.181
+OXA-1,True,True,True,blaoxa-1,pan_11,Beta.lactam,antibiotic.inactivation,0.65,0.674,0.034
+OXA-10,True,True,True,blaoxa-10,pan_17,Beta.lactam,antibiotic.inactivation,0.982,0.393,0.181
+OXA-129,True,True,True,blaoxa-129,pan_268,Beta.lactam,antibiotic.inactivation,0.925,0.113,0.061
+OXA-17,True,True,True,blaoxa-17,pan_264,Beta.lactam,antibiotic.inactivation,0.956,0.377,0.183
+OXA-2,True,True,True,blaoxa-2,pan_5112;pan_74,Beta.lactam,antibiotic.inactivation,0.987,0.362,0.203
+OXA-205,True,False,True,blaoxa-205,pan_30,Beta.lactam,antibiotic.inactivation,0.889,0.182,0.126
+OXA-347,True,False,True,blaoxa-347,pan_1,Beta.lactam,antibiotic.inactivation,0.65,0.513,0.109
+OXA-46,True,True,True,blaoxa-46,pan_547,Beta.lactam,antibiotic.inactivation,0.597,0.251,0.07
+OXA-5,True,True,True,blaoxa-5,pan_270,Beta.lactam,antibiotic.inactivation,0.704,0.272,0.025
+OXA-50,True,False,True,blaoxa-50,pan_1620,Beta.lactam,antibiotic.inactivation,0.562,0.322,0.166
+OXA-641,True,False,False,blaoxa-641,,Beta.lactam,antibiotic.inactivation,0.619,0.179,0.145
+OXA-9,True,True,True,blaoxa-9,pan_2293,Beta.lactam,antibiotic.inactivation,0.704,0.166,0.247
+PAU-1,True,False,False,pau-1,,Beta.lactam,antibiotic.inactivation,0.593,0.273,0.166
+poxtA,False,False,True,poxta,,Multidrug,antibiotic.target.protection,0.836,0.223,0.133
+QnrS2,True,True,True,qnrs2,pan_1365,Fluoroquinolone,antibiotic.target.protection,0.628,0.175,0.209
+RCP-1,True,False,False,rcp-1,,Penam,antibiotic.inactivation,0.553,0.208,0.101
+Streptomyces rimosus otr(A),False,False,False,streptomyces rimosus otr(a),,Tetracycline,antibiotic.target.protection,0.739,0.31,-0.079
+SubclassB1,False,False,False,subclassb1,,Beta.lactam,antibiotic.inactivation,1.0,0.448,-0.068
+SubclassB2,False,False,False,subclassb2,,Beta.lactam,antibiotic.inactivation,1.0,0.142,-0.01
+SubclassB3,False,False,False,subclassb3,,Beta.lactam,antibiotic.inactivation,0.996,0.269,-0.216
+sul1,True,True,True,sul1,pan_254;pan_2687;pan_2696;pan_2731;pan_2942;pan_2946;pan_2950;pan_3158;pan_3618;pan_3662;pan_3692;pan_4114;pan_4115;pan_4206;pan_4236;pan_4396;pan_4440;pan_4608;pan_4680;pan_4682;pan_4917;pan_4957;pan_5019;pan_5033;pan_5046;pan_5102;pan_5106;pan_5134;pan_5992;pan_7047;pan_7049;pan_7274;pan_7276,Sulfonamide,antibiotic.target.replacement,1.0,0.433,0.62
+sul2,False,True,True,sul2,,Sulfonamide,antibiotic.target.replacement,0.991,0.634,0.117
+TEM-116,True,False,True,blatem-116,pan_24,Beta.lactam,antibiotic.inactivation,0.575,0.243,0.304
+tet(32),True,False,True,tet(32),pan_1405;pan_411,Tetracycline,antibiotic.target.protection,0.699,0.555,-0.067
+tet(36),True,False,True,tet(36),pan_543,Tetracycline,antibiotic.target.protection,0.721,0.667,0.159
+tet(39),True,False,True,tet(39),pan_5833,Tetracycline,antibiotic.efflux,0.796,0.156,0.122
+tet(A),False,True,True,tet(a),,Tetracycline,antibiotic.efflux,0.889,0.417,0.353
+tet(C),True,True,True,tet(c),pan_2166;pan_4424,Tetracycline,antibiotic.efflux,0.973,0.492,0.341
+tet(D),True,False,True,tet(d),pan_463;pan_4665,Tetracycline,antibiotic.efflux,0.991,0.545,0.216
+tet(E),True,False,True,tet(e),pan_1716;pan_1847;pan_7290,Tetracycline,antibiotic.efflux,0.726,0.244,0.111
+tet(M),True,True,True,tet(m),pan_2147;pan_2210;pan_2928;pan_2944;pan_3645;pan_3646;pan_3671;pan_4021;pan_4204;pan_4312;pan_4679;pan_7248;pan_8334,Tetracycline,antibiotic.target.protection,0.85,0.458,0.013
+tet(O),True,False,True,tet(o),pan_1442;pan_2717;pan_423,Tetracycline,antibiotic.target.protection,0.686,0.388,0.013
+tet(Q),True,True,True,tet(q),pan_2911;pan_3163;pan_4020;pan_4270,Tetracycline,antibiotic.target.protection,0.969,0.423,0.205
+tet(W),True,False,True,tet(w),pan_2366;pan_2374;pan_5835;pan_5954;pan_9,Tetracycline,antibiotic.target.protection,0.947,0.221,0.095
+tet(W/N/W),True,False,False,tet(w/n/w),,Tetracycline,antibiotic.target.protection,0.783,0.547,0.018
+tet(X),True,True,True,tet(x),pan_2799;pan_4024;pan_941,Tetracycline,antibiotic.inactivation,0.947,0.465,0.029
+tet(X5),True,False,True,tet(x5),pan_2181,Tetracycline,antibiotic.inactivation,0.721,0.414,0.099
+tetB(P),True,False,False,tetb(p),,Tetracycline,antibiotic.target.protection,0.717,0.281,-0.186
+Tetracycline_Resistance_MFS_Efflux_Pump,False,False,False,tetracycline_resistance_mfs_efflux_pump,,Tetracycline,antibiotic.efflux,1.0,0.269,-0.239
+vanG,False,False,False,vang,,Glycopeptide,antibiotic.target.alteration,0.805,0.251,0.074
+vanH gene in vanA cluster,False,False,False,vanh gene in vana cluster,,Glycopeptide,antibiotic.target.alteration,0.735,0.157,0.088
+vanH gene in vanB cluster,False,False,False,vanh gene in vanb cluster,,Glycopeptide,antibiotic.target.alteration,0.987,0.259,0.125
+vanH gene in vanD cluster,False,False,False,vanh gene in vand cluster,,Glycopeptide,antibiotic.target.alteration,0.965,0.435,0.033
+vanH gene in vanF cluster,False,False,False,vanh gene in vanf cluster,,Glycopeptide,antibiotic.target.alteration,0.783,0.156,0.152
+vanH gene in vanO cluster,False,False,False,vanh gene in vano cluster,,Glycopeptide,antibiotic.target.alteration,1.0,0.202,0.203
+vanT gene in vanG cluster,False,False,False,vant gene in vang cluster,,Glycopeptide,antibiotic.target.alteration,1.0,0.272,-0.247
+vanW gene in vanB cluster,False,False,False,vanw gene in vanb cluster,,Glycopeptide,antibiotic.target.alteration,0.965,0.221,-0.035
+vanW gene in vanG cluster,False,False,False,vanw gene in vang cluster,,Glycopeptide,antibiotic.target.alteration,0.991,0.528,-0.162
+vanW gene in vanI cluster,False,False,False,vanw gene in vani cluster,,Glycopeptide,antibiotic.target.alteration,1.0,0.191,-0.129
+vanY gene in vanA cluster,False,False,False,vany gene in vana cluster,,Glycopeptide,antibiotic.target.alteration,0.973,0.204,0.12
+vanY gene in vanB cluster,False,False,False,vany gene in vanb cluster,,Glycopeptide,antibiotic.target.alteration,1.0,0.32,-0.045
+vanY gene in vanF cluster,False,False,False,vany gene in vanf cluster,,Glycopeptide,antibiotic.target.alteration,0.978,0.142,0.148
+vanY gene in vanG cluster,False,False,False,vany gene in vang cluster,,Glycopeptide,antibiotic.target.alteration,1.0,0.108,0.101
+vanY gene in vanM cluster,False,False,False,vany gene in vanm cluster,,Glycopeptide,antibiotic.target.alteration,1.0,0.253,-0.05
+VEB-3,True,True,True,blaveb-3,pan_1322,Beta.lactam,antibiotic.inactivation,0.65,0.702,0.275
+VEB-PER,True,True,False,veb-per,,Beta.lactam,antibiotic.inactivation,1.0,0.326,-0.11

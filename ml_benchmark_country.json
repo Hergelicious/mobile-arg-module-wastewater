@@ -1,0 +1,109 @@
+{
+ "n_samples": 226,
+ "n_predictors": 36,
+ "results": {
+  "country|module_score|elastic_net": {
+   "R2": -0.208,
+   "MAE": 0.352,
+   "RMSE": 0.438
+  },
+  "country|module_score|random_forest": {
+   "R2": -0.123,
+   "MAE": 0.356,
+   "RMSE": 0.422
+  },
+  "country|module_score|grad_boosting": {
+   "R2": -0.139,
+   "MAE": 0.359,
+   "RMSE": 0.425
+  },
+  "country|total|elastic_net": {
+   "R2": -0.216,
+   "MAE": 0.088,
+   "RMSE": 0.11
+  },
+  "country|total|random_forest": {
+   "R2": -0.112,
+   "MAE": 0.085,
+   "RMSE": 0.106
+  },
+  "country|total|grad_boosting": {
+   "R2": -0.22,
+   "MAE": 0.088,
+   "RMSE": 0.111
+  },
+  "country|richness|elastic_net": {
+   "R2": -0.196,
+   "MAE": 8.624,
+   "RMSE": 10.732
+  },
+  "country|richness|random_forest": {
+   "R2": 0.012,
+   "MAE": 7.836,
+   "RMSE": 9.755
+  },
+  "country|richness|grad_boosting": {
+   "R2": -0.017,
+   "MAE": 8.049,
+   "RMSE": 9.896
+  },
+  "country|acquired_sum|elastic_net": {
+   "R2": -0.227,
+   "MAE": 0.219,
+   "RMSE": 0.271
+  },
+  "country|acquired_sum|random_forest": {
+   "R2": -0.069,
+   "MAE": 0.195,
+   "RMSE": 0.253
+  },
+  "country|acquired_sum|grad_boosting": {
+   "R2": -0.324,
+   "MAE": 0.218,
+   "RMSE": 0.281
+  }
+ },
+ "best_model_module_score": "country|module_score|random_forest",
+ "permutation_importance_top10": [
+  [
+   "Actual.Inf.Flow.Rate..m3.d.",
+   0.1518
+  ],
+  [
+   "distance",
+   0.1395
+  ],
+  [
+   "Longitude.Google",
+   0.0855
+  ],
+  [
+   "GDP.per.capita..dollars",
+   0.0828
+  ],
+  [
+   "population",
+   0.029
+  ],
+  [
+   "Precipitation.Annual",
+   0.0269
+  ],
+  [
+   "Plant.Age.Since",
+   0.0138
+  ],
+  [
+   "ML.temp",
+   0.0133
+  ],
+  [
+   "Sludge.Age..days.",
+   0.0131
+  ],
+  [
+   "F.M",
+   0.013
+  ]
+ ]
+}

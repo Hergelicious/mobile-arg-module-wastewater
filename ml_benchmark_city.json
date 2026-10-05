@@ -1,0 +1,109 @@
+{
+ "n_samples": 226,
+ "n_predictors": 36,
+ "results": {
+  "city|module_score|elastic_net": {
+   "R2": 0.173,
+   "MAE": 0.289,
+   "RMSE": 0.362
+  },
+  "city|module_score|random_forest": {
+   "R2": 0.341,
+   "MAE": 0.26,
+   "RMSE": 0.323
+  },
+  "city|module_score|grad_boosting": {
+   "R2": 0.319,
+   "MAE": 0.267,
+   "RMSE": 0.329
+  },
+  "city|total|elastic_net": {
+   "R2": -0.067,
+   "MAE": 0.082,
+   "RMSE": 0.103
+  },
+  "city|total|random_forest": {
+   "R2": 0.058,
+   "MAE": 0.075,
+   "RMSE": 0.097
+  },
+  "city|total|grad_boosting": {
+   "R2": -0.027,
+   "MAE": 0.078,
+   "RMSE": 0.101
+  },
+  "city|richness|elastic_net": {
+   "R2": 0.24,
+   "MAE": 6.635,
+   "RMSE": 8.553
+  },
+  "city|richness|random_forest": {
+   "R2": 0.338,
+   "MAE": 5.976,
+   "RMSE": 7.987
+  },
+  "city|richness|grad_boosting": {
+   "R2": 0.287,
+   "MAE": 6.417,
+   "RMSE": 8.289
+  },
+  "city|acquired_sum|elastic_net": {
+   "R2": -0.03,
+   "MAE": 0.194,
+   "RMSE": 0.248
+  },
+  "city|acquired_sum|random_forest": {
+   "R2": 0.115,
+   "MAE": 0.17,
+   "RMSE": 0.23
+  },
+  "city|acquired_sum|grad_boosting": {
+   "R2": -0.098,
+   "MAE": 0.196,
+   "RMSE": 0.256
+  }
+ },
+ "best_model_module_score": "city|module_score|random_forest",
+ "permutation_importance_top10": [
+  [
+   "Actual.Inf.Flow.Rate..m3.d.",
+   0.1518
+  ],
+  [
+   "distance",
+   0.1395
+  ],
+  [
+   "Longitude.Google",
+   0.0855
+  ],
+  [
+   "GDP.per.capita..dollars",
+   0.0828
+  ],
+  [
+   "population",
+   0.029
+  ],
+  [
+   "Precipitation.Annual",
+   0.0269
+  ],
+  [
+   "Plant.Age.Since",
+   0.0138
+  ],
+  [
+   "ML.temp",
+   0.0133
+  ],
+  [
+   "Sludge.Age..days.",
+   0.0131
+  ],
+  [
+   "F.M",
+   0.013
+  ]
+ ]
+}

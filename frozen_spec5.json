@@ -1,0 +1,31 @@
+{
+ "reporting": "both tests reported whatever the outcome; no test is redefined after the data are seen",
+ "test_C": {
+  "multiplicity": "Holm across the four primary Spearman tests",
+  "pairings": {
+   "ecoli_3GC": "beta_lactam",
+   "ecoli_cipro": "quinolone",
+   "kpneu_3GC": "beta_lactam",
+   "kpneu_carb": "carbapenemase (NDM/KPC/OXA-48-like/VIM/IMP)"
+  },
+  "statistics": [
+   "Spearman across countries",
+   "coefficient adjusting for log GDP per capita and WHO region",
+   "module-restricted version of the matched class"
+  ],
+  "success": "Holm-adjusted P<0.05 positive for at least one pairing"
+ },
+ "test_P": {
+  "design": "country and year fixed effects, cluster-robust SE by country",
+  "outcome": "logit(resistant/interpretable) per country-year, >=20 isolates",
+  "power": "11 countries with >=2 matched years, 50 country-years; declared low-powered in advance; a null is inconclusive",
+  "predictors": [
+   "module score",
+   "acquired-not-module score",
+   "total ARG abundance"
+  ],
+  "primary_outcome": "E. coli third-generation cephalosporins",
+  "secondary": "four phenotypes pooled with phenotype fixed effects"
+ },
+ "version": "frozen-5"
+}

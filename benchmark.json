@@ -1,0 +1,68 @@
+{
+ "reliability_discovery_ICC": {
+  "total": 0.62,
+  "richness": 0.541,
+  "acquired_sum": 0.69,
+  "module_score": 0.726,
+  "module_share": 0.508
+ },
+ "stability_sewage_rho": {
+  "total": [
+   0.423,
+   7.278829604972119e-10
+  ],
+  "richness": [
+   0.221,
+   0.0019220177195248492
+  ],
+  "acquired_sum": [
+   0.372,
+   8.808983496686684e-08
+  ],
+  "module_score": [
+   0.306,
+   1.3749270648980151e-05
+  ],
+  "module_share": [
+   0.479,
+   1.3357949873144997e-12
+  ]
+ },
+ "response_to_consumption_rho": {
+  "total": [
+   0.186,
+   0.19667577137847217
+  ],
+  "richness": [
+   -0.01,
+   0.9464334567508218
+  ],
+  "acquired_sum": [
+   0.343,
+   0.014777248798422455
+  ],
+  "module_score": [
+   0.307,
+   0.03017637881729127
+  ],
+  "module_share": [
+   0.196,
+   0.17302544682865212
+  ]
+ },
+ "country_R2_sewage": {
+  "total": 0.439,
+  "richness": 0.559,
+  "acquired_sum": 0.438,
+  "module_score": 0.473,
+  "module_share": 0.444
+ },
+ "n": {
+  "discovery_samples": 226,
+  "sewage_samples": 1147,
+  "module_genes_discovery": 77,
+  "module_genes_sewage": 43,
+  "cities_multi_year": 195,
+  "countries_consumption": 50
+ }
+}

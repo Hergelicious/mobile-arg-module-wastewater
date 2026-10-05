@@ -1,0 +1,28 @@
+{
+ "within_plant_SD_log10": 0.211,
+ "between_plant_SD_log10": 0.384,
+ "n_plants_with_replicates": 44,
+ "module_score_range_log10": 1.7,
+ "MDD": {
+  "1": {
+   "log10": 0.836,
+   "fold": 6.85,
+   "as_%_of_observed_range": 49.2
+  },
+  "2": {
+   "log10": 0.591,
+   "fold": 3.9,
+   "as_%_of_observed_range": 34.8
+  },
+  "3": {
+   "log10": 0.483,
+   "fold": 3.04,
+   "as_%_of_observed_range": 28.4
+  },
+  "5": {
+   "log10": 0.374,
+   "fold": 2.36,
+   "as_%_of_observed_range": 22.0
+  }
+ }
+}

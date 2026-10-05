@@ -1,0 +1,138 @@
+{
+ "candidates": 30,
+ "ranked_top20": [
+  "mphE",
+  "ANT(3'')-IIa",
+  "msrE",
+  "tet(X)",
+  "OXA-2",
+  "tet(C)",
+  "aadA11",
+  "EreD",
+  "tet(Q)",
+  "OXA-129",
+  "mphG",
+  "Erm23SRibosomalRNAMethyltransferase",
+  "OXA-10",
+  "AAC(6')-Ib7",
+  "aadS",
+  "APH(3'')-Ib",
+  "NDM-CcrA",
+  "aadA6",
+  "APH(6)-Id",
+  "tet(W)"
+ ],
+ "full_module_genes": 77,
+ "results": {
+  "5": {
+   "genes": [
+    "mphE",
+    "ANT(3'')-IIa",
+    "msrE",
+    "tet(X)",
+    "OXA-2"
+   ],
+   "rho_with_full_discovery": 0.7817576962561563,
+   "ICC_discovery": 0.747,
+   "rho_with_full_sewage": 0.5615508056695068,
+   "sewage_ids_matched": 7,
+   "mean_rho_intI1": 0.234,
+   "consumption_rho_P": [
+    0.3027611044417767,
+    0.03258699744247484
+   ]
+  },
+  "10": {
+   "genes": [
+    "mphE",
+    "ANT(3'')-IIa",
+    "msrE",
+    "tet(X)",
+    "OXA-2",
+    "tet(C)",
+    "aadA11",
+    "EreD",
+    "tet(Q)",
+    "OXA-129"
+   ],
+   "rho_with_full_discovery": 0.8873171936116852,
+   "ICC_discovery": 0.743,
+   "rho_with_full_sewage": 0.5558526834287767,
+   "sewage_ids_matched": 16,
+   "mean_rho_intI1": 0.203,
+   "consumption_rho_P": [
+    0.009747899159663865,
+    0.9464334567508218
+   ]
+  },
+  "15": {
+   "genes": [
+    "mphE",
+    "ANT(3'')-IIa",
+    "msrE",
+    "tet(X)",
+    "OXA-2",
+    "tet(C)",
+    "aadA11",
+    "EreD",
+    "tet(Q)",
+    "OXA-129",
+    "mphG",
+    "Erm23SRibosomalRNAMethyltransferase",
+    "OXA-10",
+    "AAC(6')-Ib7",
+    "aadS"
+   ],
+   "rho_with_full_discovery": 0.9100625056852885,
+   "ICC_discovery": 0.745,
+   "rho_with_full_sewage": 0.6434309312180964,
+   "sewage_ids_matched": 18,
+   "mean_rho_intI1": 0.207,
+   "consumption_rho_P": [
+    0.09224489795918367,
+    0.5240383366312202
+   ]
+  },
+  "20": {
+   "genes": [
+    "mphE",
+    "ANT(3'')-IIa",
+    "msrE",
+    "tet(X)",
+    "OXA-2",
+    "tet(C)",
+    "aadA11",
+    "EreD",
+    "tet(Q)",
+    "OXA-129",
+    "mphG",
+    "Erm23SRibosomalRNAMethyltransferase",
+    "OXA-10",
+    "AAC(6')-Ib7",
+    "aadS",
+    "APH(3'')-Ib",
+    "NDM-CcrA",
+    "aadA6",
+    "APH(6)-Id",
+    "tet(W)"
+   ],
+   "rho_with_full_discovery": 0.9220469637311085,
+   "ICC_discovery": 0.722,
+   "rho_with_full_sewage": 0.5943531794677571,
+   "sewage_ids_matched": 34,
+   "mean_rho_intI1": 0.215,
+   "consumption_rho_P": [
+    0.11846338535414166,
+    0.4125772130443908
+   ]
+  }
+ },
+ "full_reference": {
+  "ICC_discovery": 0.726,
+  "mean_rho_intI1": 0.156,
+  "consumption_rho_P": [
+   0.306890756302521,
+   0.03017637881729127
+  ]
+ }
+}

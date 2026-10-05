@@ -1,0 +1,68 @@
+{
+ "A_network_test": {
+  "data": "Martiny et al. 2025 SD3 (nodes) and SD4 (links); acquired ARG nodes only (n=55)",
+  "mapping": {
+   "APH(3'')-Ib": "pan_4334",
+   "APH(6)-Id": "pan_1519",
+   "CfxA2": "pan_1088",
+   "EreD": "pan_1366",
+   "ErmB": "pan_2854",
+   "ErmF": "pan_8632",
+   "OXA-205": "pan_30",
+   "QnrS2": "pan_2213",
+   "aadA11": "pan_6440",
+   "aadA5": "pan_5080",
+   "aadA6": "pan_6440",
+   "aadA7": "pan_2552",
+   "lnuF": "pan_2305",
+   "lsaE": "pan_4418",
+   "mefC": "pan_1060",
+   "mphE": "pan_2095",
+   "mphG": "pan_1417",
+   "tet(A)": "pan_6296",
+   "tet(X)": "pan_2799"
+  },
+  "mapping_rule": "exact gene match after CARD->ResFinder name normalisation; a gene maps only if it matches exactly one node; functional nodes excluded (named by clone IDs, not mappable)",
+  "module_genes_mapped": [
+   "APH(3'')-Ib",
+   "APH(6)-Id",
+   "CfxA2",
+   "EreD",
+   "ErmB",
+   "ErmF",
+   "OXA-205",
+   "QnrS2",
+   "aadA11",
+   "aadA5",
+   "aadA6",
+   "aadA7",
+   "lnuF",
+   "lsaE",
+   "mefC",
+   "mphE",
+   "mphG",
+   "tet(X)"
+  ],
+  "nonmodule_genes_mapped": [
+   "tet(A)"
+  ],
+  "null": "10,000 random draws of the same number of distinct nodes from all acquired ARG nodes; one-sided P=(#null>=obs+1)/10001",
+  "primary_statistic": "fraction of pairs of distinct mapped module nodes sharing the same comm_id",
+  "reporting": "reported in the manuscript whatever the outcome",
+  "secondary": "density of acquired-acquired links among mapped module nodes vs the same null",
+  "success_criterion": "primary P<0.05",
+  "uninformative_if": "fewer than 6 distinct module nodes mapped"
+ },
+ "B_intI1_test": {
+  "data": "Zhu et al. 2025 Supplementary Data 3 (MGE abundances per sample)",
+  "intI1_definition": "rows whose MGE_Gene_name equals 'intI1' (case-insensitive), summed per sample; if absent the test is not run",
+  "null": "9,999 permutations of intI1 values among plants within country; one-sided P",
+  "primary_statistic": "mean within-country Spearman correlation with intI1 for the 45 mobile-associated genes minus that for the 69 other core genes",
+  "reporting": "reported in the manuscript whatever the outcome",
+  "secondary": "same statistic for the 77 label-free module genes versus the 37 genes outside the module",
+  "success_criterion": "primary P<0.05 in the predicted (positive) direction",
+  "transform": "plant means of log10(x + half the smallest positive value); country means removed from genes and intI1"
+ },
+ "C_depth_adjustment": "Covariate analysis, not an outcome test: D recomputed after regressing each gene (plant level) on log10 HQ bases from Zhu Supplementary Data 1",
+ "version": "frozen-1"
+}
